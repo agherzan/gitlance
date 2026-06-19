@@ -58,7 +58,7 @@ pub fn get_commits_in_range(
 
         let message = commit
             .message()
-            .ok_or_else(|| CheckError::Git("Commit has invalid message encoding".to_string()))?
+            .map_err(|e| CheckError::Git(format!("Commit has invalid message encoding: {}", e)))?
             .to_string();
 
         commits.push(Commit {
