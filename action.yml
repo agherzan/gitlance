@@ -68,7 +68,7 @@ runs:
         echo "gitlance_binary=${{ runner.temp }}/gitlance/gitlance" >> $GITHUB_ENV
 
     - name: Checkout PR ref
-      uses: actions/checkout@v4
+      uses: actions/checkout@v7
       with:
         fetch-depth: 0
 
