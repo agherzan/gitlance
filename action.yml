@@ -28,9 +28,7 @@ runs:
   using: 'composite'
   steps:
     - name: Set up Rust toolchain
-      uses: dtolnay/rust-toolchain@master
-      with:
-        toolchain: 1.96.0
+      uses: dtolnay/rust-toolchain@1.96.0
 
     - name: Download gitlance binary and run checks
       id: run-check
