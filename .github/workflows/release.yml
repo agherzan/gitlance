@@ -22,9 +22,7 @@ jobs:
       - uses: actions/checkout@v7
 
       - name: Set up Rust
-        uses: dtolnay/rust-toolchain@master
-        with:
-          toolchain: 1.96.0
+        uses: dtolnay/rust-toolchain@1.96.0
 
       # Note: Rust caching not needed for release workflow
       # Releases are infrequent (monthly) and cache expires after 7 days
